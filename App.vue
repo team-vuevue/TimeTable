@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-<h1>時間割</h1>
+    <h1>時間割</h1>
 
 
 <table id ="table1">
@@ -37,7 +37,9 @@
     </select>
     <input v-model="input" @keydown.enter="addTimetable" />
     <button @click="addTimetable">add</button>
-
+    
+    <router-link to="/Questions">Questions</router-link>
+    <router-view/>
     </div>
 
 
@@ -77,14 +79,6 @@ export default {
 td{
   text-align: center;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
 #table {
 
@@ -122,8 +116,5 @@ td{
   cursor: pointer;
 
 }
-
-
-
 
 </style>
